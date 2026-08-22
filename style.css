@@ -736,7 +736,7 @@ html{scroll-padding-top:7.5rem}
 .nav__link--external:hover{ color:var(--ivory); }
 
 .services__featured{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:0 0 2rem;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0 0 2rem;
 }
 .service-feature{
   position:relative;overflow:hidden;padding:2rem;border:1px solid var(--hairline);
@@ -784,6 +784,9 @@ html{scroll-padding-top:7.5rem}
   .contact__layout{grid-template-columns:1fr;gap:2.5rem}
   .contact__intro{align-items:center;text-align:center}
   .contact__buttons{justify-content:center}
+}
+@media (max-width:1100px){
+  .services__featured{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:760px){
   .services__featured{grid-template-columns:1fr}
