@@ -458,3 +458,57 @@ button{font:inherit}
         gap: 32px;
     }
 }
+/* =========================================================
+   EXPERIENCE / CAREER PROGRESSION — ALIGNMENT FIX
+   ========================================================= */
+
+#experience .experience__inner,
+#experience .experience__grid,
+#experience .timeline,
+#experience .experience__content {
+    width: 100%;
+    max-width: 100%;
+}
+
+#experience .experience__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+#experience .timeline,
+#experience .experience__item,
+#experience .experience__card {
+    width: 100%;
+    max-width: 100%;
+}
+
+#experience .experience__item {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+    column-gap: 56px;
+    align-items: start;
+}
+
+#experience .experience__item > * {
+    min-width: 0;
+}
+
+#experience .experience__item h3,
+#experience .experience__item h4,
+#experience .experience__item p,
+#experience .experience__item ul {
+    max-width: none;
+}
+
+#experience .experience__item ul {
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    #experience .experience__item {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
