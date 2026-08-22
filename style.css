@@ -728,3 +728,68 @@ html{scroll-padding-top:7.5rem}
   .portfolio-card__visual{height:165px}
   .portfolio-card__body{padding:1.25rem 1.15rem 1.3rem}
 }
+
+/* =========================================================
+   FINAL AMENDMENT — Muck Rack, service highlights & enquiry form
+   ========================================================= */
+.nav__link--external{ color:var(--gold-soft); }
+.nav__link--external:hover{ color:var(--ivory); }
+
+.services__featured{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:0 0 2rem;
+}
+.service-feature{
+  position:relative;overflow:hidden;padding:2rem;border:1px solid var(--hairline);
+  background:linear-gradient(145deg,#fffdf8,#f4eddd);
+  min-height:220px;
+}
+.service-feature::after{
+  content:"";position:absolute;width:130px;height:130px;border:1px solid rgba(194,154,75,.35);
+  border-radius:50%;right:-55px;top:-55px;
+}
+.service-feature__eyebrow{font:600 .72rem var(--font-head);letter-spacing:.16em;color:var(--gold);margin-bottom:.65rem}
+.service-feature h3{font-size:1.35rem;margin-bottom:.7rem}
+.service-feature p:last-child{max-width:55ch;color:var(--charcoal-60);font-size:.94rem}
+
+.contact__layout{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);gap:4rem;align-items:center;
+}
+.contact__intro{text-align:left;display:flex;flex-direction:column;align-items:flex-start}
+.contact__lead{max-width:52ch;color:rgba(247,244,236,.78);font-family:var(--font-editorial);font-style:italic;font-size:1.12rem;margin-bottom:1.5rem}
+.contact-form-wrap{width:100%}
+.contact-form-card{
+  background:#050505;color:#f7f4ec;border:1px solid rgba(227,202,142,.34);padding:1.6rem;
+  box-shadow:0 22px 70px rgba(0,0,0,.28);
+}
+.contact-form-card__eyebrow{font:600 .7rem var(--font-head);letter-spacing:.16em;color:var(--gold-soft);margin-bottom:.55rem}
+.contact-form-card h3{color:var(--ivory);font-size:1.45rem;margin-bottom:.45rem}
+.contact-form-card__head>p:last-child{color:rgba(247,244,236,.62);font-size:.84rem}
+.contact-form{display:grid;gap:.9rem;margin-top:1.25rem}
+.contact-form label{display:grid;gap:.35rem;color:rgba(247,244,236,.82);font:500 .76rem var(--font-head);letter-spacing:.01em}
+.contact-form input,.contact-form textarea{
+  width:100%;border:1px solid rgba(247,244,236,.17);background:#101010;color:var(--ivory);
+  padding:.78rem .85rem;border-radius:2px;font:400 .9rem var(--font-body);outline:none;resize:vertical;
+  transition:border-color .2s var(--ease),background-color .2s var(--ease);
+}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold-soft);background:#151515}
+.contact-form textarea{min-height:86px}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(247,244,236,.34)}
+.contact-form__submit{width:100%;border:0;margin-top:.25rem;cursor:pointer}
+.contact-form__submit:disabled{opacity:.65;cursor:wait;transform:none}
+.contact-form__status{min-height:1.4em;color:var(--gold-soft);font:500 .8rem var(--font-head);line-height:1.45}
+.contact-form__honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.contact-form__frame{display:none}
+
+@media (max-width:900px){
+  .contact__layout{grid-template-columns:1fr;gap:2.5rem}
+  .contact__intro{align-items:center;text-align:center}
+  .contact__buttons{justify-content:center}
+}
+@media (max-width:760px){
+  .services__featured{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .contact-form-card{padding:1.15rem}
+  .contact__buttons{gap:.65rem}
+  .contact__buttons .btn{padding:.72rem 1rem;font-size:.82rem}
+}
