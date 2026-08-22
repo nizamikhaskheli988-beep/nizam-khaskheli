@@ -19,7 +19,7 @@ The final site includes a black, responsive contact form. To make submissions re
    with your `/exec` URL.
 10. Re-upload the site.
 
-The sheet automatically creates a `Website Enquiries` tab with these columns:
+After the connection is deployed, open the Google Sheet you created. The submissions will appear in a tab named `Website Enquiries` (the script creates it automatically) with these columns:
 
 - Timestamp
 - Name

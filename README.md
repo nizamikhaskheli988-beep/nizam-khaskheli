@@ -1,22 +1,19 @@
-# Nizam Khaskheli — Final Digital CV
+# Nizam Khaskheli — Final Website Build
 
-Final static build prepared for the free Cloudflare Worker deployment.
+This package is rebuilt from the last stable website version and contains only the requested final amendments:
 
-Target public URL:
-https://visit.nizamkhaskheli.workers.dev/
+- Dedicated Muck Rack header link
+- Dedicated Send an Enquiry header button
+- Social Media Marketing service
+- Organizational Marketing Assets service
+- Wikipedia Content & Editorial Management service
+- Black contact/enquiry form
+- Google Sheets Apps Script integration files
+- Fixed AI Guide button for desktop and mobile
+- Existing approved visual design, portfolio, hero image, navigation and responsive behavior preserved
 
-## Files
-- index.html — semantic page structure + SEO/schema
-- style.css — redesigned editorial visual system
-- script.js — navigation + accessible scroll animations
-- nizam-khaskheli.jpg — supplied portrait
-- favicon.svg
-- robots.txt
-- sitemap.xml
+## Google Sheet connection
 
-## Deploy
-Replace the existing files in the GitHub repository with these files and commit to `main`.
-Cloudflare's connected deployment should automatically publish the new commit.
+The form is ready for Google Apps Script. Follow `FORM-SETUP.md` once to connect it to a Google Sheet. The sheet will contain a `Website Enquiries` tab.
 
-## Important
-The supplied ZIP contained one portrait file, not two. This build uses that supplied portrait in the hero. No second portrait was invented or duplicated.
+The AI Guide is an on-site instant guide based on the website's own information. It does not expose an API key or private credentials.
