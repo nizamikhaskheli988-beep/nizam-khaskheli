@@ -423,4 +423,38 @@ button{font:inherit}
     margin-left: 2rem;
     text-align: left;
   }
+}/* =========================================================
+   ABOUT SECTION — ALIGNMENT FIX
+   ========================================================= */
+
+#about .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+}
+
+#about .about__grid > * {
+    align-self: start;
+}
+
+#about .about__body,
+#about .about__text {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#about .about__grid p {
+    margin-top: 0;
+}
+
+#about .about__grid p + p {
+    margin-top: 0;
+}
+
+@media (max-width: 800px) {
+    #about .about__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
