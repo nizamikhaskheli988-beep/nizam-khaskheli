@@ -181,7 +181,7 @@ button{font:inherit}
 
 /* About */
 .about__grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:clamp(2rem,7vw,7rem);align-items:start}
-.about__grid::before{content:"01";font-family:var(--serif);font-size:clamp(5rem,11vw,10rem);line-height:.8;color:rgba(185,139,61,.14);font-style:italic}
+.about__grid::before{display:none}
 
 /* Timeline */
 .timeline{position:relative;margin-top:2.5rem}
