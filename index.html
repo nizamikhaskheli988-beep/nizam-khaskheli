@@ -194,7 +194,27 @@
   if (toggle && menu) {
     toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
     if (close) close.addEventListener('click', () => setMenu(false));
-    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        setMenu(false);
+        if (link.getAttribute('href') === '#contact') {
+          event.preventDefault();
+          window.setTimeout(() => {
+            const contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 30);
+        }
+      });
+    });
+    document.querySelectorAll('a[href="#contact"]').forEach((link) => {
+      if (menu && menu.contains(link)) return;
+      link.addEventListener('click', (event) => {
+        const contact = document.getElementById('contact');
+        if (!contact) return;
+        event.preventDefault();
+        contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') setMenu(false);
     });
