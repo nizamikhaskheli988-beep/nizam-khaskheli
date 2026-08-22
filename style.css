@@ -495,13 +495,14 @@ html{scroll-padding-top:7.5rem}
 .portrait-frame:hover .portrait-img{transform:scale(1.015)}
 
 /* Career progression: use the full content width instead of leaving the right side empty */
-#experience .timeline{margin-top:2.2rem}
-#experience .timeline__item{display:grid;grid-template-columns:190px minmax(0,1fr);gap:2.25rem;padding-left:0;align-items:start;margin-bottom:3.5rem}
+#experience .timeline{margin-top:2.2rem;width:100%;padding:0}
+#experience .timeline__item{display:block;position:relative;width:100%;padding-left:2.6rem;margin-bottom:3.5rem}
 #experience .timeline__marker{left:0;top:.35rem}
-#experience .timeline__era,#experience .timeline__date{padding-left:2rem}
-#experience .timeline__content{max-width:none;min-width:0}
-#experience .timeline__org{max-width:90ch}
-#experience .timeline__bullets{max-width:92ch}
+#experience .timeline__content{display:block;width:100%;max-width:none;min-width:0}
+#experience .timeline__era,#experience .timeline__date{padding-left:0}
+#experience .timeline__org{max-width:none}
+#experience .timeline__bullets{max-width:none;width:100%}
+#experience .timeline__bullets li{max-width:100%}
 
 /* About alignment */
 #about .about__grid{grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
@@ -526,7 +527,7 @@ html{scroll-padding-top:7.5rem}
   .hero__inner{grid-template-columns:1fr;gap:2.5rem}
   .hero__portrait{order:-1;justify-self:start}
   .portrait-frame{width:min(100%,280px);max-height:none}
-  #experience .timeline__item{grid-template-columns:1fr;gap:.7rem;padding-left:0}
+  #experience .timeline__item{display:block;padding-left:2.2rem}
   #experience .timeline__date,#experience .timeline__era{padding-left:2rem}
 }
 @media (max-width:760px){
