@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nizamkhaskheli.com/sitemap.xml
+Sitemap: https://visit.nizamkhaskheli.workers.dev/sitemap.xml
