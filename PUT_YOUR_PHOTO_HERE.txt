@@ -1,0 +1,14 @@
+Add your portrait photograph in this folder as:
+
+    nizam-khaskheli.jpg
+
+Recommended: a vertical/portrait-orientation photo, roughly 1000x1200px or larger,
+well-lit, professional headshot or half-body shot.
+
+Then in index.html, inside the <div class="hero__portrait"> block:
+1. Delete the <div class="portrait-placeholder">...</div>
+2. Uncomment the <img src="assets/nizam-khaskheli.jpg" ...> line
+
+This is the ONLY photograph used anywhere on the site (the hero image).
+
+Delete this text file once your photo is in place.
