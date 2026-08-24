@@ -1,33 +1,46 @@
-# Contact form → Google Sheets setup
+# Website enquiry form + Google Sheets
 
-The final site includes a black, responsive contact form. The previous Send an Enquiry header button has been removed. The form is ready to register submissions in your own Google Sheet once the included Apps Script endpoint is deployed.
+The restored website keeps the original visual design, animations, ticker effects and alignment. The contact form is connected separately through Google Apps Script, so the website layout does not depend on the spreadsheet.
 
-## Setup
+## 1. Connect the form to your existing Google Sheet
 
-1. Create a new Google Sheet.
-2. Open **Extensions → Apps Script**.
-3. Replace the default code with `google-apps-script.gs`.
-4. Save the project.
-5. Choose **Deploy → New deployment → Web app**.
-6. Set **Execute as** to your Google account.
-7. Set **Who has access** to **Anyone**.
-8. Deploy and copy the Web app URL ending in `/exec`.
-9. Open `index.html` and replace:
+The included `google-apps-script.gs` is already configured for the spreadsheet you supplied:
 
-   `YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL`
+`1qn9Ma5BAK5szO2YBs4HPVz0OKvmoGd0J`
 
-   with your `/exec` URL.
-10. Re-upload the site.
+Open that spreadsheet and choose **Extensions → Apps Script**. Replace the default Apps Script code with the contents of `google-apps-script.gs`.
 
-After the connection is deployed, open the Google Sheet you created. The submissions will appear in a tab named `Website Enquiries` (the script creates it automatically) with these columns:
+Then choose **Deploy → New deployment → Web app** and use:
+
+- Execute as: **Me**
+- Who has access: **Anyone**
+
+Authorize the script when Google asks. Copy the deployed URL ending in `/exec`.
+
+## 2. Put the Web App URL into the website
+
+In `index.html`, find:
+
+`YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL`
+
+and replace it with your `/exec` URL.
+
+Do not put the Google Sheet URL into the HTML. The Sheet remains private; only the Apps Script Web App receives the form submission.
+
+## 3. What appears in the Sheet
+
+Each successful submission creates one new row:
 
 - Timestamp
-- Name
+- Full Name
 - Brief Introduction
-- Looking For
+- What They're Looking For
 - Query
-- Source
 
-The website form uses a hidden honeypot field to reduce simple automated spam. The browser shows the confirmation message immediately after submission: **“We have got your back. Hold on a little while — your message is on its way.”**
+## 4. Visitor analytics
 
-The Google Sheet remains in your Google account; the website package does not contain credentials or private sheet access.
+The restored website also contains a Google Analytics 4 integration placeholder. Replace `G-XXXXXXXXXX` in `index.html` with your Google Analytics **Measurement ID**.
+
+After deployment, Google Analytics can show aggregate visitor information such as users, sessions, pages viewed, traffic sources, device type and approximate location. It does **not** normally reveal the real-world identity of anonymous visitors.
+
+The enquiry form is the appropriate place for visitors to voluntarily identify themselves.
