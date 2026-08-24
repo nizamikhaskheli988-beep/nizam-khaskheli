@@ -147,12 +147,12 @@
 <div class="ai-guide" id="aiGuide">
   <button class="ai-guide__toggle" id="aiGuideToggle" type="button" aria-expanded="false" aria-controls="aiGuidePanel">
     <span class="ai-guide__orb" aria-hidden="true">✦</span>
-    <span class="ai-guide__label">May I Help You?</span>
+    <span class="ai-guide__label">AI Guide</span>
   </button>
-  <section class="ai-guide__panel" id="aiGuidePanel" aria-label="May I Help You? professional profile assistant">
+  <section class="ai-guide__panel" id="aiGuidePanel" aria-label="Instant website guide">
     <div class="ai-guide__head">
-      <div><p class="ai-guide__eyebrow">MAY I HELP YOU?</p><h2>How can I help?</h2></div>
-      <button class="ai-guide__close" id="aiGuideClose" type="button" aria-label="Close May I Help You?">×</button>
+      <div><p class="ai-guide__eyebrow">INSTANT GUIDE</p><h2>How can I help?</h2></div>
+      <button class="ai-guide__close" id="aiGuideClose" type="button" aria-label="Close AI Guide">×</button>
     </div>
     <div class="ai-guide__messages" id="aiGuideMessages" aria-live="polite">
       <div class="ai-guide__message ai-guide__message--bot">Hi. I can guide you through Nizam's services, selected work, journalism profile, availability and contact options.</div>
@@ -167,7 +167,7 @@
       <input id="aiGuideInput" type="text" autocomplete="off" placeholder="Type your question…" aria-label="Ask the instant guide">
       <button type="submit" aria-label="Send question">↗</button>
     </form>
-    <p class="ai-guide__note">I can answer questions about Nizam’s career, services, selected work and contact options. For a detailed request, use the Leave a Message form.</p>
+    <p class="ai-guide__note">Instant guidance from this website. For a detailed request, use the contact form below.</p>
   </section>
 </div>
 
@@ -273,65 +273,21 @@
   const answers = {
     services: 'Nizam provides journalism and editorial services, SEO and content writing, strategic communications, donor and CSR communications, social media marketing, organizational marketing assets, multimedia and documentary production, campaign content, and Wikipedia content and editorial management.',
     portfolio: 'Selected work covers editorial and digital publishing, documentary storytelling, strategic and donor communications for LCF Pakistan, and a five-year newsroom career across GTV Network, Pakistan Press Foundation, Asia Net, KTN News, Awaz TV and Royal Karachi News.',
-    availability: 'For availability or a project discussion, use the Leave a Message form in the Contact section. Share what you need, your organization or background, and your query so the request can be reviewed properly.',
-    contact: 'Use the Leave a Message form in the Contact section. You can also use the direct email and social links there.',
+    availability: 'For availability or a project discussion, use the contact form below. Share what you need, your organization or background, and your query so the request can be reviewed properly.',
+    contact: 'Use the contact form near the bottom of the site. You can also use the direct email and social links in the Contact section.',
     muck: 'Nizam\'s journalism work and journalist profile are available on Muck Rack. Use the Muck Rack button in the header to open the profile.',
     wikipedia: 'Wikipedia services cover research-led content development, article structuring, sourcing, editing and editorial management, with attention to neutral language, reliable citations and Wikipedia\'s editorial standards.'
   };
 
-  const isRomanUrdu = (text) => {
-    const q = String(text || '').toLowerCase();
-    const romanUrduWords = [
-      'kya','hai','hain','kaise','kaisa','kaisi','kis','kahan','kab','kyun','kyon','mujhe','mujh','mera','meri','mere','aap','ap','aapko','apko','nizam','ke','ki','ko','se','mein','may','bata','bataye','batao','kar','karta','karte','kr','krsakte','sakte','sakti','chahte','chahiye','kaam','kam','tajurba','tajurbe','khidmaat','services','rabta','raabta','mil','milna','contact','madad','madadgar','hire','kaisehire','portfolio','journalism','muckrack','wikipedia'
-    ];
-    const hits = romanUrduWords.filter(word => new RegExp('(^|\\s)' + word.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '(?=\\s|$)', 'i').test(q)).length;
-    const hasUrduSyntax = /\b(aur|ya|phir|agar|lekin|kyun|kya|ka|ki|ke|mein|se|par|tak|liye|liya|gaya|gayi|raha|rahi|hain|hai)\b/i.test(q);
-    return hits >= 2 || hasUrduSyntax;
-  };
-
-  const isUrduScript = (text) => /[\u0600-\u06FF]/.test(String(text || ''));
-
-  const romanUrduAnswers = {
-    services: 'Nizam journalism, editorial content, SEO aur content writing, strategic communications, donor aur CSR communications, social media marketing, organizational marketing assets, multimedia aur documentary production, campaign content, aur Wikipedia content aur editorial management ki services provide karte hain.',
-    portfolio: 'Nizam ke selected work mein editorial aur digital publishing, documentary storytelling, LCF Pakistan ke liye strategic aur donor communications, aur GTV Network, Pakistan Press Foundation, Asia Net, KTN News, Awaz TV aur Royal Karachi News mein paanch saal ka newsroom experience shamil hai.',
-    availability: 'Agar aap project ya professional opportunity discuss karna chahte hain to Contact section mein Leave a Message form use karein. Apne project, organization aur requirement ke bare mein thori detail share karein.',
-    contact: 'Aap Contact section mein Leave a Message form use kar sakte hain. Wahan direct email aur social links bhi available hain.',
-    muck: 'Nizam ka journalism profile aur selected journalism work Muck Rack par available hai. Header mein Muck Rack button se profile open kar sakte hain.',
-    wikipedia: 'Wikipedia service mein research based content development, article structure, reliable sourcing, editing aur editorial management shamil hain. Content ko neutral language aur Wikipedia ke editorial standards ko madde nazar rakh kar tayar kiya jata hai.'
-  };
-
-  const urduAnswers = {
-    services: 'Nizam صحافت، اداری مواد، SEO اور content writing، strategic communications، donor اور CSR communications، social media marketing، organizational marketing assets، multimedia اور documentary production، campaign content، اور Wikipedia content اور editorial management کی خدمات فراہم کرتے ہیں۔',
-    portfolio: 'Nizam کے منتخب کام میں editorial اور digital publishing، documentary storytelling، LCF Pakistan کے لیے strategic اور donor communications، اور GTV Network، Pakistan Press Foundation، Asia Net، KTN News، Awaz TV اور Royal Karachi News میں پانچ سال کا newsroom experience شامل ہے۔',
-    availability: 'اگر آپ project یا professional opportunity پر بات کرنا چاہتے ہیں تو Contact section میں Leave a Message form استعمال کریں۔ اپنے project، organization اور requirement کے بارے میں مختصر تفصیل شامل کریں۔',
-    contact: 'آپ Contact section میں Leave a Message form استعمال کر سکتے ہیں۔ وہاں direct email اور social links بھی موجود ہیں۔',
-    muck: 'Nizam کا journalism profile اور selected journalism work Muck Rack پر موجود ہے۔ Header میں Muck Rack button سے profile کھولی جا سکتی ہے۔',
-    wikipedia: 'Wikipedia service میں research based content development، article structure، reliable sourcing، editing اور editorial management شامل ہیں۔ Content کو neutral language اور Wikipedia کے editorial standards کو مدنظر رکھ کر تیار کیا جاتا ہے۔'
-  };
-
-  const classifyIntent = (text) => {
-    const q = String(text || '').toLowerCase();
-    if (q.includes('muck') || q.includes('journalism profile')) return 'muck';
-    if (q.includes('wikipedia') || q.includes('wiki')) return 'wikipedia';
-    if (q.includes('service') || q.includes('offer') || q.includes('do you') || q.includes('what can') || q.includes('what do')) return 'services';
-    if (q.includes('portfolio') || q.includes('work') || q.includes('project') || q.includes('experience')) return 'portfolio';
-    if (q.includes('available') || q.includes('availability') || q.includes('hire') || q.includes('freelance') || q.includes('job')) return 'availability';
-    if (q.includes('contact') || q.includes('reach') || q.includes('email') || q.includes('enquiry') || q.includes('inquiry') || q.includes('message')) return 'contact';
-    return null;
-  };
-
   const replyFor = (text) => {
-    const intent = classifyIntent(text);
-    if (isUrduScript(text)) {
-      if (intent) return urduAnswers[intent];
-      return 'میں Nizam کے career، services، selected work اور contact options کے بارے میں معلومات دے سکتا ہوں۔ آپ اپنا سوال اردو میں پوچھ سکتے ہیں۔';
-    }
-    if (isRomanUrdu(text)) {
-      if (intent) return romanUrduAnswers[intent];
-      return 'Main Nizam ke career, services, selected work aur contact options ke bare mein guide kar sakta hoon. Aap apna sawal Roman Urdu mein pooch sakte hain.';
-    }
-    if (intent) return answers[intent];
-    return 'I can help you explore Nizam’s career, services, selected work, Muck Rack profile, availability and contact options. Ask me anything about these areas.';
+    const q = text.toLowerCase();
+    if (q.includes('muck') || q.includes('journalism profile')) return answers.muck;
+    if (q.includes('wikipedia')) return answers.wikipedia;
+    if (q.includes('service') || q.includes('offer') || q.includes('do you')) return answers.services;
+    if (q.includes('portfolio') || q.includes('work') || q.includes('project')) return answers.portfolio;
+    if (q.includes('available') || q.includes('availability') || q.includes('hire')) return answers.availability;
+    if (q.includes('contact') || q.includes('reach') || q.includes('email') || q.includes('enquiry') || q.includes('inquiry')) return answers.contact;
+    return 'I can help you find the right section, service or contact option. Try asking about services, portfolio, availability, Muck Rack, Wikipedia work or contacting Nizam.';
   };
 
   const addMessage = (text, bot) => {
