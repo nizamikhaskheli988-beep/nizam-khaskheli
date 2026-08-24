@@ -23,15 +23,7 @@
 <meta name="twitter:image" content="https://visit.nizamkhaskheli.workers.dev/assets/nizam-khaskheli.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet"> <link rel="stylesheet" href="style.css">
-<!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
-</script> <!-- Structured data: Person -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet"> <link rel="stylesheet" href="style.css"> <!-- Structured data: Person -->
 <script type="application/ld+json">
 { "@context": "https://schema.org", "@type": "Person", "name": "Nizam Khaskheli", "alternateName": "Nizam-Uddin Khaskheli", "jobTitle": "Communication & Marketing Officer", "description": "Karachi-based journalist, strategic communications professional and multimedia storyteller with 9+ years across broadcast news, digital media, editorial content and nonprofit donor communications.", "url": "https://visit.nizamkhaskheli.workers.dev/", "image": "https://visit.nizamkhaskheli.workers.dev/assets/nizam-khaskheli.jpg", "email": "mailto:nizamkhaskheli988@gmail.com", "telephone": "+92-321-1263406", "address": { "@type": "PostalAddress", "addressLocality": "Karachi", "addressCountry": "PK" }, "worksFor": { "@type": "Organization", "name": "The Life Changing Foundation (LCF) Pakistan" }, "alumniOf": { "@type": "CollegeOrUniversity", "name": "SZABIST University, Karachi" }, "knowsAbout": [ "Investigative Journalism", "Broadcast News Reporting", "Documentary Production", "Editorial Leadership", "CSR & Donor Proposal Writing", "Strategic Communications", "Brand Storytelling", "SEO & Content Writing", "Advocacy Communications", "Donor Communications", "Multimedia Storytelling" ], "sameAs": [ "https://www.linkedin.com/in/nizam-uddin-a80105393/", "https://www.facebook.com/people/Nizam-Khaskheli/pfbid02JHVqVkU1X79TqSRb5tmzg2qRRCMNdY21jjFmo4Lgp6rfTdWKMhmAxt5phXQ5WW2fl/", "https://linktr.ee/nizamkhaskheli_" ]
 }
@@ -125,45 +117,29 @@
     <div class="contact__intro">
       <p class="eyebrow eyebrow--light">Contact</p>
       <h2 class="section__title section__title--light">Let's Connect</h2>
-      <p class="contact__lead">If I am away from my desk, leave a message here. Tell me who you are, what you need and where you want to take the idea.</p>
+      <p class="contact__lead">For professional opportunities, collaborations, media work, communications projects or general enquiries, you can reach Nizam directly through the contact options below.</p>
       <p class="contact__name">Nizam Khaskheli</p>
       <p class="contact__meta">Karachi, Pakistan</p>
       <p class="contact__meta"><a href="mailto:nizamkhaskheli988@gmail.com">nizamkhaskheli988@gmail.com</a></p>
       <p class="contact__meta"><a href="tel:+923211263406">+92-321-1263406</a></p>
       <div class="contact__buttons"> <a href="https://www.linkedin.com/in/nizam-uddin-a80105393/" target="_blank" rel="noopener noreferrer" class="btn btn--outline-light">LinkedIn</a> <a href="https://www.facebook.com/people/Nizam-Khaskheli/pfbid02JHVqVkU1X79TqSRb5tmzg2qRRCMNdY21jjFmo4Lgp6rfTdWKMhmAxt5phXQ5WW2fl/" target="_blank" rel="noopener noreferrer" class="btn btn--outline-light">Facebook</a> <a href="https://linktr.ee/nizamkhaskheli_" target="_blank" rel="noopener noreferrer" class="btn btn--outline-light">Linktree</a> <a href="https://muckrack.com/nizam-khaskheli" target="_blank" rel="noopener noreferrer" class="btn btn--outline-light">Muck Rack</a> <a href="mailto:nizamkhaskheli988@gmail.com" class="btn btn--gold">Email Me</a> </div>
     </div>
-    <div class="contact-form-wrap" data-reveal>
-      <div class="contact-form-card">
-        <div class="contact-form-card__head"><p class="contact-form-card__eyebrow">LEAVE A MESSAGE</p><h3>Let's start the conversation.</h3><p>Your message is collected securely through the connected Google Sheet.</p></div>
-        <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycbyAySGu5610MzScvmmNnHXKawztjxR4g6zVT7ErFlscNZxh2cGCb7ouXIlhdyFUeFaswQ/exec" method="POST" target="contactSubmitFrame">
-          <input type="hidden" name="source" value="Nizam Khaskheli Portfolio Website">
-          <label>Full name<input type="text" name="name" autocomplete="name" required></label>
-          <label>Brief introduction<textarea name="intro" rows="3" placeholder="A sentence or two about you or your organization" required></textarea></label>
-          <label>What are you looking for?<input type="text" name="looking_for" placeholder="For example: editorial support, social media, communications strategy" required></label>
-          <label>Your query<textarea name="query" rows="5" placeholder="Tell me a little about the project, opportunity or question" required></textarea></label>
-          <div class="contact-form__honeypot" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-          <button type="submit" class="btn btn--gold contact-form__submit">Send Message <span aria-hidden="true">↗</span></button>
-          <p class="contact-form__status" id="contactStatus" role="status" aria-live="polite"></p>
-        </form>
-        <iframe name="contactSubmitFrame" id="contactSubmitFrame" title="Form submission" class="contact-form__frame" aria-hidden="true"></iframe>
-      </div>
-    </div>
   </div>
-</section> </main>
+</section></main>
 
 <!-- ============ FIXED AI GUIDE ============ -->
 <div class="ai-guide" id="aiGuide">
   <button class="ai-guide__toggle" id="aiGuideToggle" type="button" aria-expanded="false" aria-controls="aiGuidePanel">
     <span class="ai-guide__orb" aria-hidden="true">✦</span>
-    <span class="ai-guide__label">May I Help You</span>
+    <span class="ai-guide__label">May I Help You?</span>
   </button>
   <section class="ai-guide__panel" id="aiGuidePanel" aria-label="Instant website guide">
     <div class="ai-guide__head">
-      <div><p class="ai-guide__eyebrow">INSTANT GUIDE</p><h2>How can I help?</h2></div>
+      <div><p class="ai-guide__eyebrow">INSTANT GUIDE</p><h2>May I Help You?</h2></div>
       <button class="ai-guide__close" id="aiGuideClose" type="button" aria-label="Close May I Help You">×</button>
     </div>
     <div class="ai-guide__messages" id="aiGuideMessages" aria-live="polite">
-      <div class="ai-guide__message ai-guide__message--bot">Hi. I can guide you through Nizam's services, selected work, journalism profile, availability and contact options.</div>
+      <div class="ai-guide__message ai-guide__message--bot">Hi. I can guide you through Nizam's professional work, services, selected work and contact options. You can also ask me in Roman Urdu.</div>
     </div>
     <div class="ai-guide__quick" aria-label="Quick questions">
       <button type="button" data-guide="services">Services</button>
@@ -175,7 +151,7 @@
       <input id="aiGuideInput" type="text" autocomplete="off" placeholder="Type your question…" aria-label="Ask the instant guide">
       <button type="submit" aria-label="Send question">↗</button>
     </form>
-    <p class="ai-guide__note">Instant guidance from this website. For a detailed request, use the contact form below.</p>
+    <p class="ai-guide__note">Ask in English or Roman Urdu. I can explain Nizam's work, services and direct contact options.</p>
   </section>
 </div>
 
@@ -253,23 +229,6 @@
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
-  // Contact form confirmation. The actual Sheet endpoint is configured in the form action.
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('contactStatus');
-  if (form && status) {
-    form.addEventListener('submit', () => {
-      const honeypot = form.querySelector('[name="website"]');
-      if (honeypot && honeypot.value) return;
-      status.textContent = 'We have got your back. Hold on a little while — your message is on its way.';
-      const submit = form.querySelector('.contact-form__submit');
-      if (submit) submit.disabled = true;
-      window.setTimeout(() => {
-        form.reset();
-        if (submit) submit.disabled = false;
-      }, 1400);
-    });
-  }
-
   // Fixed on-site AI-style guide. It does not require an API key or expose private credentials.
   const guide = document.getElementById('aiGuide');
   const guideToggle = document.getElementById('aiGuideToggle');
@@ -278,24 +237,50 @@
   const guideForm = document.getElementById('aiGuideForm');
   const guideInput = document.getElementById('aiGuideInput');
 
+  const contactDetails = {
+    phone: '+92-321-1263406',
+    email: 'nizamkhaskheli988@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/nizam-uddin-a80105393/',
+    facebook: 'https://www.facebook.com/people/Nizam-Khaskheli/pfbid02JHVqVkU1X79TqSRb5tmzg2qRRCMNdY21jjFmo4Lgp6rfTdWKMhmAxt5phXQ5WW2fl/',
+    muckrack: 'https://muckrack.com/nizam-khaskheli'
+  };
+
   const answers = {
     services: 'Nizam provides journalism and editorial services, SEO and content writing, strategic communications, donor and CSR communications, social media marketing, organizational marketing assets, multimedia and documentary production, campaign content, and Wikipedia content and editorial management.',
     portfolio: 'Selected work covers editorial and digital publishing, documentary storytelling, strategic and donor communications for LCF Pakistan, and a five-year newsroom career across GTV Network, Pakistan Press Foundation, Asia Net, KTN News, Awaz TV and Royal Karachi News.',
-    availability: 'For availability or a project discussion, use the contact form below. Share what you need, your organization or background, and your query so the request can be reviewed properly.',
-    contact: 'Use the contact form near the bottom of the site. You can also use the direct email and social links in the Contact section.',
-    muck: 'Nizam\'s journalism work and journalist profile are available on Muck Rack. Use the Muck Rack button in the header to open the profile.',
+    availability: 'Nizam is open to professional opportunities, collaborations and suitable journalism, editorial, communications, marketing and content projects. For a direct discussion, use the email or phone number below.',
+    contact: `You can contact Nizam directly:\nPhone: ${contactDetails.phone}\nEmail: ${contactDetails.email}\nLinkedIn: ${contactDetails.linkedin}\nFacebook: ${contactDetails.facebook}`,
+    muck: `Nizam's journalism profile and selected published work are available on Muck Rack: ${contactDetails.muckrack}`,
     wikipedia: 'Wikipedia services cover research-led content development, article structuring, sourcing, editing and editorial management, with attention to neutral language, reliable citations and Wikipedia\'s editorial standards.'
+  };
+
+  const romanUrduAnswers = {
+    services: 'Nizam journalism, editorial work, SEO aur content writing, strategic communications, donor communications, social media marketing, organizational marketing assets, multimedia aur documentary production, campaign content aur Wikipedia content management ki services provide karte hain.',
+    portfolio: 'Nizam ke selected kaam mein editorial aur digital publishing, documentary storytelling, LCF Pakistan ke strategic aur donor communications projects, aur GTV Network, Pakistan Press Foundation, Asia Net, KTN News, Awaz TV aur Royal Karachi News ka newsroom experience shamil hai.',
+    availability: 'Nizam professional opportunities, collaborations aur journalism, editorial, communications, marketing aur content projects ke liye available hain. Direct baat ke liye neeche phone ya email use karein.',
+    contact: `Nizam se seedha rabta karne ke liye:\nPhone: ${contactDetails.phone}\nEmail: ${contactDetails.email}\nLinkedIn: ${contactDetails.linkedin}\nFacebook: ${contactDetails.facebook}`,
+    muck: `Nizam ka journalism profile aur selected published work Muck Rack par available hai: ${contactDetails.muckrack}`,
+    wikipedia: 'Wikipedia service mein research, article structuring, reliable sourcing, editing aur editorial management shamil hain, neutral language aur Wikipedia ke editorial standards ko madde nazar rakhte hue.'
+  };
+
+  const isRomanUrdu = (text) => {
+    const q = text.toLowerCase().replace(/[^a-z0-9\s]/g, ' ');
+    const markers = ['mujhe', 'mujhy', 'aap', 'ap', 'kaise', 'kaisay', 'kya', 'kia', 'karna', 'krna', 'chahiye', 'chahta', 'chahti', 'batao', 'batain', 'madad', 'rabta', 'mil', 'sakta', 'sakti', 'aapka', 'apka', 'mera', 'meri', 'aap se', 'nizam ka', 'kaam kya', 'kitna', 'kahan'];
+    return markers.some((word) => q.includes(word));
   };
 
   const replyFor = (text) => {
     const q = text.toLowerCase();
-    if (q.includes('muck') || q.includes('journalism profile')) return answers.muck;
-    if (q.includes('wikipedia')) return answers.wikipedia;
-    if (q.includes('service') || q.includes('offer') || q.includes('do you')) return answers.services;
-    if (q.includes('portfolio') || q.includes('work') || q.includes('project')) return answers.portfolio;
-    if (q.includes('available') || q.includes('availability') || q.includes('hire')) return answers.availability;
-    if (q.includes('contact') || q.includes('reach') || q.includes('email') || q.includes('enquiry') || q.includes('inquiry')) return answers.contact;
-    return 'I can help you find the right section, service or contact option. Try asking about services, portfolio, availability, Muck Rack, Wikipedia work or contacting Nizam.';
+    const roman = isRomanUrdu(text);
+    const bank = roman ? romanUrduAnswers : answers;
+    if (q.includes('muck') || q.includes('journalism profile')) return bank.muck;
+    if (q.includes('wikipedia')) return bank.wikipedia;
+    if (q.includes('service') || q.includes('offer') || q.includes('what can') || q.includes('do you')) return bank.services;
+    if (q.includes('portfolio') || q.includes('work') || q.includes('project') || q.includes('experience') || q.includes('career')) return bank.portfolio;
+    if (q.includes('available') || q.includes('availability') || q.includes('hire') || q.includes('freelance') || q.includes('job')) return bank.availability;
+    if (q.includes('contact') || q.includes('reach') || q.includes('email') || q.includes('phone') || q.includes('number') || q.includes('facebook') || q.includes('linkedin') || q.includes('rabta') || q.includes('email')) return bank.contact;
+    if (roman) return 'Bilkul. Main Nizam ke services, professional experience, selected work aur contact details ke bare mein guide kar sakta hoon. Aap services, kaam, experience ya contact ke bare mein pooch sakte hain.';
+    return 'I can guide you through Nizam\'s services, professional experience, selected work, availability and direct contact details. You can also ask in Roman Urdu.';
   };
 
   const addMessage = (text, bot) => {
