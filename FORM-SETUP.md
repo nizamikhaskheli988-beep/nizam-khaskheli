@@ -1,6 +1,6 @@
 # Contact form → Google Sheets setup
 
-The final site includes a black, responsive contact form. The previous Send an Enquiry header button has been removed. The form is ready to register submissions in your own Google Sheet once the included Apps Script endpoint is deployed.
+The final site includes a black, responsive contact form. To make submissions register in your own Google Sheet, connect the included `google-apps-script.gs` endpoint once.
 
 ## Setup
 

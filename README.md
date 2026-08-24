@@ -3,6 +3,7 @@
 This package is rebuilt from the last stable website version and contains only the requested final amendments:
 
 - Dedicated Muck Rack header link
+- Dedicated Send an Enquiry header button
 - Social Media Marketing service
 - Organizational Marketing Assets service
 - Wikipedia Content & Editorial Management service
