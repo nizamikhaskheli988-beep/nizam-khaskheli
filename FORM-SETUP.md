@@ -21,7 +21,7 @@ Authorize the script when Google asks. Copy the deployed URL ending in `/exec`.
 
 In `index.html`, find:
 
-`YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL`
+`https://script.google.com/macros/s/AKfycbyAySGu5610MzScvmmNnHXKawztjxR4g6zVT7ErFlscNZxh2cGCb7ouXIlhdyFUeFaswQ/exec`
 
 and replace it with your `/exec` URL.
 
