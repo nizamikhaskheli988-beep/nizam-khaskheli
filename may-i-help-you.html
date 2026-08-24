@@ -1,0 +1,35 @@
+<!-- May I Help You? — standalone chatbot widget
+     Add this file with may-i-help-you.css and may-i-help-you.js.
+     It does not alter your existing website structure.
+-->
+<link rel="stylesheet" href="may-i-help-you.css">
+<div id="nzk-help-widget" class="nzk-help" aria-live="polite">
+  <button class="nzk-help__fab" type="button" aria-expanded="false" aria-controls="nzk-help-panel">
+    <span class="nzk-help__dot" aria-hidden="true"></span>
+    <span>May I Help You?</span>
+  </button>
+  <section id="nzk-help-panel" class="nzk-help__panel" hidden aria-label="May I Help You chatbot">
+    <header class="nzk-help__head">
+      <div>
+        <strong>May I Help You?</strong>
+        <small>Professional profile assistant</small>
+      </div>
+      <button class="nzk-help__close" type="button" aria-label="Close chat">×</button>
+    </header>
+    <div class="nzk-help__messages" data-messages>
+      <div class="nzk-help__msg nzk-help__msg--bot">
+        Hi. I can help you explore Nizam's professional background, services, selected work, and contact options.
+      </div>
+    </div>
+    <div class="nzk-help__quick" data-quick>
+      <button type="button" data-q="What services does Nizam offer?">Services</button>
+      <button type="button" data-q="What is Nizam's professional background?">Career</button>
+      <button type="button" data-q="How can I contact Nizam?">Contact</button>
+    </div>
+    <form class="nzk-help__form" data-chat-form>
+      <input data-chat-input autocomplete="off" maxlength="600" placeholder="Type your question..." aria-label="Your question">
+      <button type="submit" aria-label="Send">Send</button>
+    </form>
+  </section>
+</div>
+<script src="may-i-help-you.js" defer></script>

@@ -1,0 +1,19 @@
+.nzk-help{position:fixed;right:22px;bottom:22px;z-index:9999;font-family:Inter,system-ui,-apple-system,sans-serif}
+.nzk-help__fab{display:flex;align-items:center;gap:9px;border:1px solid #C29A4B;background:#0A1730;color:#FAF7EF;border-radius:999px;padding:11px 16px;box-shadow:0 12px 30px rgba(5,11,24,.25);cursor:pointer;font:600 13px/1 Sora,Inter,sans-serif}
+.nzk-help__fab:hover{background:#142544}
+.nzk-help__dot{width:8px;height:8px;border-radius:50%;background:#C29A4B;box-shadow:0 0 0 4px rgba(194,154,75,.14)}
+.nzk-help__panel{width:min(370px,calc(100vw - 28px));height:min(520px,calc(100vh - 105px));margin-bottom:10px;background:#FAF7EF;border:1px solid rgba(194,154,75,.45);box-shadow:0 24px 60px rgba(5,11,24,.28);display:flex;flex-direction:column;overflow:hidden}
+.nzk-help__head{display:flex;justify-content:space-between;align-items:center;background:#0A1730;color:#FAF7EF;padding:16px 17px}
+.nzk-help__head strong{display:block;font:600 15px/1.2 Sora,Inter,sans-serif}
+.nzk-help__head small{display:block;margin-top:4px;color:#E3CA8E;font-size:11px}
+.nzk-help__close{background:transparent;border:0;color:#FAF7EF;font-size:25px;line-height:1;cursor:pointer}
+.nzk-help__messages{flex:1;overflow:auto;padding:15px;display:flex;flex-direction:column;gap:10px}
+.nzk-help__msg{max-width:88%;padding:10px 12px;font-size:13px;line-height:1.55;border-radius:4px}
+.nzk-help__msg--bot{align-self:flex-start;background:#fff;color:#1A1D22;border-left:3px solid #C29A4B}
+.nzk-help__msg--user{align-self:flex-end;background:#0A1730;color:#FAF7EF}
+.nzk-help__quick{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid rgba(10,23,48,.10)}
+.nzk-help__quick button{border:1px solid #C29A4B;background:transparent;color:#0A1730;border-radius:999px;padding:6px 9px;font-size:11px;cursor:pointer}
+.nzk-help__form{display:flex;gap:7px;padding:11px;border-top:1px solid rgba(10,23,48,.12);background:#fff}
+.nzk-help__form input{min-width:0;flex:1;border:1px solid rgba(10,23,48,.2);padding:10px;font:13px Inter,sans-serif;background:#FAF7EF;color:#1A1D22}
+.nzk-help__form button{border:0;background:#C29A4B;color:#050B18;padding:0 13px;font:600 12px Sora,Inter,sans-serif;cursor:pointer}
+@media(max-width:600px){.nzk-help{right:12px;bottom:12px}.nzk-help__fab{padding:10px 13px;font-size:12px}.nzk-help__panel{width:calc(100vw - 24px);height:min(500px,calc(100vh - 90px))}}
